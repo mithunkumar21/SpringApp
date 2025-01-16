@@ -1,4 +1,4 @@
-name: Build and Deploy Python Flask App with Docker
+name: Build and Deploy Python Flask app with Docker
 
 on:
   push:
