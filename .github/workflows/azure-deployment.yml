@@ -40,11 +40,10 @@ jobs:
       run: |
         docker push mithun704/python-flask-app:latest
 
-    # Step 7: Deploy the application to Azure Web App 
+    # Step 7: Deply the application to azure app service
     - name: Deploy to Azure Web App
-      uses: azure/webapps-deploy@v2  
+      uses: azure/webapps-deploy@v2
       with:
-        app-name: ${{ secrets.AZURE_WEBAPP_NAME }}  
-        slot-name: production  # Deployment slot (use 'production' for live deployment)
-        publish-profile: ${{ secrets.AZURE_CREDENTIALS }}  # Azure publish profile (stored in GitHub Secrets)
-        images: mithun704/my-spring-app:latest  # The Docker image to deploy (from DockerHub)
+        app-name: ${{ secrets.AZURE_WEBAPP_NAME }}  # Azure Web App name
+        publish-profile: ${{ secrets.AZURE_CREDENTIALS }}  # Updated publish profile
+        slot-name: production  # Deployment slot
