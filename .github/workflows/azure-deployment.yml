@@ -34,4 +34,4 @@ jobs:
     - name: Push Docker Image
       run: |
         docker tag python-flask-app:${{ github.sha }} my-dockerhub-username/python-flask-app:latest
-        docker push my-dockerhub-username/python-flask-app:latest
+        docker push mithun704/python-flask-app:latest
