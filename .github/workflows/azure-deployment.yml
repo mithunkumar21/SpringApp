@@ -46,4 +46,4 @@ jobs:
       with:
         app-name: ${{ secrets.AZURE_WEBAPP_NAME }}  # Azure Web App name
         publish-profile: ${{ secrets.AZURE_CREDENTIALS }}  # Updated publish profile
-        slot-name: production  # Deployment slot
+        images: mithun704/python-flask-app:latest
